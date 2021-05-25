@@ -49,7 +49,7 @@ df2020['Year'] = '2020'
 
 df_list = [df2020, df2019, df2018, df2017, df2016, df2015]
 df = pd.concat(df_list, axis=0)
-# df['Days'] = df['Days'].astype(int)
+df['Year'] = df['Year'].astype(str)
 df['WAR Lost'] = df.apply(lambda row: (0.85 * row.Days * 1.50) / 150, axis=1)
 
 # initial = input('Give the initial for which team you would like info on.')
